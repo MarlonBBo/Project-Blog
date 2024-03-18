@@ -1,0 +1,41 @@
+<div class="jumbotron">
+  {{#if user}}
+<h1 class="display-4">Seja Bem-vindo</h1><br>
+<h1 class="display-4">{{user.nome}}</h1>
+
+  <hr class="my-4">
+<p class="lead">Aqui você pode acompanhar as postagens mais atualizadas do mundo da técnologia</p>
+
+<hr>
+
+<h2 class="mt-5">postagens recentes: </h2>
+
+{{#each postagens}}
+
+<div class="card mt-4">
+  <div class="card-body">
+    <h3>{{titulo}}</h3>
+    <p>{{descricao}}</p>
+    <hr>
+    <small>Categoria: {{categoria.name}}</small><br>
+    {{!-- <small>{{date}}</small><br> --}}
+    <a href="/postagem/{{slug}}"><button class="btn btn-success mt-4">Ler mais</button></a>
+  </div>
+</div>
+{{else}}
+<p class="mt-4">Nenhuma postagem</p>
+{{/each}}
+
+  {{else}}
+
+<h1 class="display-4">Seja bem-vindo</h1>
+  <p class="lead">Este é um simples componente jumbotron para chamar mais atenção a um determinado conteúdo ou informação.</p>
+  <hr class="my-4">
+  <p>Ele usa classes utilitárias para tipografia e espaçamento de conteúdo, dentro do maior container.</p>
+  <a class="btn btn-primary btn-lg " href="/usuarios/registro" role="button">Crie uma conta</a> 
+  <a class="btn btn-primary btn-lg" href="/usuarios/login" role="button">Entrar</a>
+
+  {{/if}}
+  
+</div>
+
