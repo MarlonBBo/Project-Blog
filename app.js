@@ -2,6 +2,7 @@ const express = require("express");
 const handlebars = require("express-handlebars");
 const bodyParser = require("body-parser");
 const admin = require('./routes/admin');
+require("dotenv").config();
 const path = require('path');
 const app = express();
 const mongoose = require('mongoose');
@@ -46,8 +47,12 @@ require('./config/auth')(passport);
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
     //Mongoose
+
+    const dbsenha = process.env.DB_PASSWORD;
+    const dbuser = process.env.DB_USER;
+
     mongoose.Promise = global.Promise;
-    mongoose.connect("mongodb+srv://marlon:ahrgreV5SYepils1@starwars.ee189ab.mongodb.net/?retryWrites=true&w=majority").then(()=>{
+    mongoose.connect(`mongodb+srv://${dbuser}:${dbsenha}@starwars.ee189ab.mongodb.net/?retryWrites=true&w=majority`).then(()=>{
         console.log('Server conectado ao mongo');
     }).catch((err)=>{
         console.log("Houve um erro"+err);
