@@ -9,10 +9,11 @@
       <li class="nav-item active">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
+      
+      {{#if user}}
       <li class="nav-item">
         <a class="nav-link" href="/categorias">Categorias </a>
       </li>
-      {{#if user}}
       <li class="nav-item">
         <a class="nav-link disabled" href="/admin">Area admin </a>
       </li>
