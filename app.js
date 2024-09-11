@@ -135,7 +135,7 @@ app.use('/usuarios', usuarios);
 
 
 //Started server
-const PORT = process.env.PORT || 3333;
+const PORT = 3333;
 app.listen(PORT, ()=>{
     console.log("Server started at port " + PORT);
 });
