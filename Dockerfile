@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 3333
 
 # Defina o comando para iniciar a aplicação
-CMD ["node", "Project-Blog/app.js"]
+CMD ["npm", "start"]
