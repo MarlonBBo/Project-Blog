@@ -2,7 +2,7 @@
 FROM node:18
 
 # Crie e defina o diretório de trabalho no contêiner
-WORKDIR /Project-Blog
+WORKDIR /app
 
 # Copie o arquivo package.json e package-lock.json para o diretório de trabalho
 COPY package*.json ./
@@ -18,4 +18,4 @@ COPY . .
 EXPOSE 3333
 
 # Defina o comando para iniciar a aplicação
-CMD ["npm", "start"]
+CMD ["node", "Project-Blog/app.js"]

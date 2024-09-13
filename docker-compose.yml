@@ -5,7 +5,7 @@ services:
     ports:
       - "3333:3333"
     volumes:
-      - .:/usr/src/app
+      - ./Project-Blog:/app
     environment:
       - DB_PASSWORD=zQsosSTY4zoO6BdV
       - DB_USER=marlon
