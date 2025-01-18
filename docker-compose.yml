@@ -7,5 +7,5 @@ services:
     volumes:
       - .:/usr/src/app
     environment:
-      - DB_PASSWORD=zQsosSTY4zoO6BdV
+      - DB_PASSWORD=xQnCSPsGWqd88_R
       - DB_USER=marlon
